@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/common/layouts/">
+    <excludes>
+        <pattern>/common/*</pattern>
+        <pattern>/api/*</pattern>
+        <pattern>/login*</pattern>
+        <pattern>/error</pattern>
+        <pattern>/error/*</pattern>
+        <pattern>*/ajax/*</pattern>
+        <pattern>*/ajax*</pattern>
+    </excludes>
+    <decorator name="section" page="section.jsp">
+        <pattern>/**/*Section</pattern>
+        <pattern>/**/*Section/**</pattern>
+    </decorator>
+    <decorator name="default" page="default.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <decorator name="home" page="frame.jsp">
+        <pattern>/home</pattern>
+    </decorator>
+</decorators>

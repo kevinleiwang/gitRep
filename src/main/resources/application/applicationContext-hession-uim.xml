@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+	<!-- uim service 客户端 -->
+	<bean id="currency"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/currencyExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.ICurrency" />
+	</bean>
+	<bean id="shippingline"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/shippinglineExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.IShippingline" />
+	</bean>
+	<!-- 国家 -->
+	<bean id="countryServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/countryServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.ICountryServiceWS" />
+	</bean>
+	<!-- 城市 -->
+	<bean id="cityServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/cityServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.ICityServiceWS" />
+	</bean>
+	<!-- 港口 -->
+	<bean id="portcodeServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/portcodeServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.IPortcodeServiceWS" />
+	</bean>
+	<!-- 服务产品报价 -->
+	<bean id="prdQuoteServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/prdQuoteServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.IPrdQuoteServiceWS" />
+	</bean>
+	<!-- 单位客户端接口 -->
+	<bean id="unitServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/unitServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.IUnitServiceWS" />
+	</bean>
+	<!-- 箱型客户端接口 -->
+	<bean id="containersize"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/containersizeExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.uim.IContainersize" />
+	</bean>
+</beans>

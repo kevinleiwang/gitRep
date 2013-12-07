@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- 输出到日志文件（其他部分的日志） -->
+	<appender name="app_filelog"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<!-- 设置File参数：日志输出文件名 -->
+		<param name="File" value="${catalina.home}/logs/app_filelog.log" />
+		<!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<!-- 设置输出文件项目和格式 -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-5p %-d{yyyy-MM-dd HH:mm:ss} [%c.%M(%L)] - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 输出到控制台中 -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-5p: [%c.(%L)%M] - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 输出到控制台中 -->
+	<appender name="other_console"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[%d] [%-5p] %c %n--%m--%n" />
+		</layout>
+	</appender>
+
+	<!-- 设置类名限制输出的通道（springframework） -->
+	<!--  -->
+	<logger name="org.springframework" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="console" />
+		<appender-ref ref="app_filelog" />
+	</logger>
+
+	<!-- 设置类名限制输出的通道（Connection） -->
+	<logger name="java.sql.Connection" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="other_console" />
+		<appender-ref ref="app_filelog" />
+	</logger>
+
+	<!-- 设置类名限制输出的通道（Statement） -->
+	<logger name="java.sql.Statement" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="other_console" />
+		<appender-ref ref="app_filelog" />
+	</logger>
+
+	<!-- 设置类名限制输出的通道（PreparedStatement） -->
+	<logger name="java.sql.PreparedStatement" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="other_console" />
+		<appender-ref ref="app_filelog" />
+	</logger>
+
+	<!-- 设置类名限制输出的通道（ResultSet） -->
+	<logger name="java.sql.ResultSet" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="other_console" />
+		<appender-ref ref="app_filelog" />
+	</logger>
+	<!-- 设置接收所有输出的通道 -->
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="console" />
+	</root>
+	
+</log4j:configuration>

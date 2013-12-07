@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseLayout" template="/WEB-INF/views/template/pages/layout.jsp">
+		<put-attribute name="title" value="SivaLabs" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/template/pages/header.jsp" />
+		<put-attribute name="navigation"
+			value="/WEB-INF/views/template/pages/navigation.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/template/pages/footer.jsp" />
+	</definition>
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Jackychen : Login" />
+		<put-attribute name="navigation" value="" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/template/pages/login.jsp" />
+	</definition>
+	<definition name="index" extends="baseLayout">
+		<put-attribute name="title" value="Jackychen : Welcome" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/template/pages/index.jsp" />
+		<put-attribute name="helloContent"
+			value="/WEB-INF/views/template/pages/ftl/helloContent.ftl" />
+	</definition>
+</tiles-definitions>

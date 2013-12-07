@@ -1,0 +1,348 @@
+/*
+desc:sunivo page skin
+author:wanglei
+data:20131025
+*/
+body {
+	color: #000000;
+	font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+dl {
+	margin: 0px;
+}
+a {
+    color: #26a0da;
+}
+.pointer {
+	cursor: pointer;
+}
+
+.sunivoPage {
+	margin-top: 50px;
+}
+
+.sunivoPage .sunivoTitle {
+	line-height: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.sunivoTitle>div {
+	line-height: 50px;
+	height: 50px;
+}
+
+.sunivoTitle>div>span {
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 20px;
+}
+
+.sunivoPage .sunivoTitle .pageTitle {
+	color: #26a0da;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sunivoPage .sunivoTitle .statistics {
+	color: #26a0da;
+}
+
+.sunivoPage .sunivoBorder {
+	border-style: none solid solid;
+	border-width: 0 1px 1px;
+	border-color: #E2E2E2;
+	"
+}
+
+.sunivoPage .sunivoBorder .sectionTitle {
+	background-color: #EEEEEE;
+	padding: 1px 15px;
+	margin: 0 0 20px;
+	color: #3CA2E3;
+}
+
+.sectionTitle {
+	background-color: #EEEEEE;
+	padding: 1px 15px;
+	/* margin: 0 0 20px; */
+	color: #3CA2E3;
+}
+
+.sunivoPage .sunivoFilterForm {
+	margin-bottom: 20px;
+	padding: 8px/15px;
+}
+
+.sunivoPage .sunivoFilterForm .filterCondition {
+	
+}
+
+.sunivoPage .sunivoFilterForm .filterAction {
+	text-align: right;
+}
+
+.sunivoPage .sunivoFilterForm .filterAction>span {
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 20px;
+}
+
+.sunivoPage .sunivoList {
+	
+}
+
+.sunivoPage .sunivoList>.row-fluid {
+	overflow: hidden;
+}
+
+.sunivoPage .sunivoList>.row-fluid>div {
+	padding: 10px 8px;
+}
+
+.sunivoPage .sunivoList>.row-fluid {
+	background-color: #f5f5f5;
+	margin-bottom: 10px;
+}
+
+.sunivoPage .sunivoList>.row-fluid:hover {
+	color: #ffffff;
+	background-color: #26a0da !important;
+}
+
+.sunivoPage .sunivoList>.row-fluid:hover .number {
+	background-color: #ffffff !important;
+}
+
+.sunivoPage .sunivoList>.row-fluid:hover .number a {
+	color: #26a0da !important;
+}
+
+.sunivoPage .sunivoList .number {
+	height: 85px;
+	width: 85px;
+	background-color: #26a0da;
+	text-align: center;
+	line-height: 85px;
+}
+
+.sunivoPage .sunivoList .number span {
+	vertical-align: middle;
+	display: inline-block;
+	width: 100%;
+	color: #ffffff !important;
+	line-height: 20px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.sunivoPage .sunivoList .number span a {
+	color: #ffffff !important;
+}
+
+.sunivoPage .sunivoList dt,.list dl,.list dd {
+	line-height: 20px !important;
+	margin: 0;
+}
+
+.sunivoPage .sunivoList dt {
+	width: 85px !important;
+	height: 20px !important;
+	text-align: left;
+}
+
+.sunivoPage .sunivoList dd {
+	margin-left: 85px !important;
+	height: 20px !important;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 160px;
+}
+
+.sunivoPage .sunivoList .content {
+	font-size: 0.9em;
+	height: 85px;
+	overflow: hidden;
+	line-height: 85px;
+	margin-top: 0;
+}
+
+.sunivoPage .sunivoList .content>dl {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.sunivoPage .sunivoList .action {
+	line-height: 85px;
+	height: 85px;
+	text-align: center;
+}
+
+.sunivoPage .sunivoList .action>span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 20px;
+	width: 115px;
+}
+
+/*
+*验证相关的CSS
+*auth:nirui
+*/
+.error,.chzn-container .error {
+	border: 1px solid red !important;
+}
+
+/*
+*分页相关的CSS
+*auth:nirui
+*/
+.pagination ul {
+	float: right;
+}
+
+.pagination {
+	margin-top: 10px;
+}
+
+/**
+ * 控制使用class='i'的a标记不现实超链接的颜色和动作
+ * author:chengjianfang@sunivo.com
+ * date:2013-11-7 20:39:04
+ */
+a.i {
+	text-decoration: none;
+	color: #000;
+}
+
+select[data-action='pop-form'] > option{
+	display:none;
+	height: 0;
+	border: none;
+	padding: 0;
+}
+
+#filterForm input,#filterForm select {
+	margin-bottom: 5px !important;
+}
+
+#filterForm input[type='text'],#filterForm input[type='password'],#filterForm select,#filterForm textarea,#filterForm .chzn-container,#filterForm .date-picker>input
+	{
+	border: 1px solid #A5A5A5;
+}
+
+#filterForm select.m-wrap,#filterForm  .chzn-container-single .chzn-single,#filterForm .chzn-container-multi .chzn-choices
+	{
+	border: none !important;
+}
+
+#filterForm select,#filterForm input {
+	height: 30px;
+	line-height: 30px;
+}
+
+/**
+ * 增加样式调整，解决字体图标重影问题
+ * author:chengjianfang@sunivo.com
+ */
+[class^="icon-"], [class*=" icon-"] {
+	background-position: 14px 14px;
+}
+
+/**
+ * 增加样式调整，解决chosen高度为23px问题
+ * author:chengjianfang@sunivo.com
+ */
+.chosen-container-single .chosen-single {
+	height: 28px;
+}
+
+.chosen-container {
+	font-size: 14px;
+}
+
+/**
+ * 解决control 和 control-label在详情展示盒的时候不在同一水平线上
+ * author:wanglei
+ */
+.form-horizontal .control-label {
+    padding-top: 0px;
+}
+
+/**
+ * 首页开始
+ * author:wanglei
+ */
+.index-row{
+	margin-bottom: 20px;
+}
+
+.index-row .index-logo{
+	height:40px; 
+	line-height: 40px;
+	over-flow: hidden;
+	background-color: white;
+	color:#26a0da;
+	padding-top: 20px;
+}
+
+.index-row .index-box{
+	height:140px; 
+	line-height: 140px;
+	over-flow: hidden;
+	background-color: #26a0da;
+	color:white;
+}
+
+.index-row .index-box:hover {
+	color: #ffffff;
+	background-color: #A5A5A5 !important;
+	cursor: pointer;
+}
+
+.index-row .index-closed-box{
+	height:140px; 
+	line-height: 140px;
+	over-flow: hidden;
+	background-color: #26a0da;
+	color:white;
+}
+
+.index-row .index-closed-box:hover {
+}
+.index-row h1 > i{
+	vertical-align:middle;
+	}
+.index-row .index-box,.index-row .index-closed-box{
+	position:relative;
+	}
+.index-row .index-box .box-name,.index-row .index-closed-box .box-name{
+	position:absolute;
+	bottom:5px;
+	left:5px;
+	line-height:20px;
+	}
+.index-row .index-box > p.text-center > span,.index-row .index-closed-box > p.text-center > span{
+	position:relative;
+	left:-8%;
+	}
+/**
+ * 首页结尾
+ * author:wanglei
+ */
+
+ [class^="icon-"], [class*="icon-"] {
+    vertical-align: middle;
+}
+
+.row-fluid [class*="span"] {
+	min-height: 20px;
+}
+
+select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+   
+    height: 30px;
+   
+}

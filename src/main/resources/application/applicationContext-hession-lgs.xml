@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+	<!-- 海运整箱附加费service客户端 -->
+	<bean id="lgsAddationQuoteInfo"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsAddationQuoteInfoExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsAddationQuoteInfo" />
+	</bean>
+	<!-- 优势航线service客户端 -->
+	<bean id="lgsAdvantageRouteSet"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsAdvantageRouteSetExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsAdvantageRouteSet" />
+	</bean>
+	
+	<!-- 报价详情明细service客户端 -->
+	<bean id="lgsFclQsurchargeServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsFclQsurchargeServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsFclQsurchargeServiceWS" />
+	</bean>
+	
+	<!-- 海运费报价service客户端 -->
+	<bean id="lgsFclQuoteInfoServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsFclQuoteInfoServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsFclQuoteInfoServiceWS" />
+	</bean>
+	
+	<!-- 询价service客户端 -->
+	<bean id="lgsInquiryServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsInquiryServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsInquiryServiceWS" />
+	</bean>
+
+	<!-- 询价service客户端 -->
+	<bean id="lgsLclQuoteInfoServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsLclQuoteInfoServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsLclQuoteInfoServiceWS" />
+	</bean>
+	
+		<!-- 本地费service客户端 -->
+	<bean id="lgsPortServiceWs"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/lgsPortServiceWSExporter" />
+		<property name="serviceInterface" value="com.sunivo.ws.interfaces.server.lgs.ILgsPortServiceWS" />
+	</bean>
+	
+	<!-- 海运整箱附加费service客户端 -->
+	<bean id="lgsRouteAdditionQuote"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsRouteAdditionQuoteExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsRouteAdditionQuote" />
+	</bean>
+	
+	
+	<!--nirui 物流海运整箱询价客户端 -->
+	<bean id="lgsFclQuoteInfoCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsFclQuoteInfoCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsFclQuoteInfoCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流海运拼箱询价客户端 -->
+	<bean id="lgsLclQuoteInfoCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsLclQuoteInfoCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsLclQuoteInfoCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流空运询价客户端 -->
+	<bean id="lgsAirQuoteInfoCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsAirQuoteInfoCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsAirQuoteInfoCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流集卡询价客户端 -->
+	<bean id="lgsStruckQuoteInfoCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsStruckQuoteInfoCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsStruckQuoteInfoCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流零担询价客户端 -->
+	<bean id="lgsBreakstrucktruckQuoteInfoCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsBreakstruckQuoteInfoCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsBreakstruckQuoteInfoCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流海运整箱询价费用客户端 -->
+	<bean id="lgsFclQsurchargeCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsFclQsurchargeCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsFclQsurchargeCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流海运拼箱询价费用客户端 -->
+	<bean id="lgsLclQsurchargeCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsLclQsurchargeCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsLclQsurchargeCaseServiceWS" />
+	</bean>
+	
+	<!--nirui 物流空运拼箱询价费用客户端 -->
+	<bean id="lgsAirQsurchargeCaseServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsAirQsurchargeCaseServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsAirQsurchargeCaseServiceWS" />
+	</bean>
+	
+	<!-- 报价导入客户端 -->
+	<bean id="lgsQuoteImportServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${webservice.url}/lgsQuoteImportServiceWSExporter" />
+		<property name="serviceInterface" value="com.sunivo.ws.interfaces.server.lgs.ILgsQuoteImportServiceWS" />
+	</bean>
+	
+	<!-- 代理费报价service客户端 -->
+	<bean id="lgsProxySurchargeServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsProxySurchargeServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsProxySurchargeServiceWS" />
+	</bean>
+	<!-- 海运整箱附加费service客户端 -->
+	<bean id="lgsAdditionQuoteServiceWS"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${webservice.url}/lgsAdditionQuoteServiceWSExporter" />
+		<property name="serviceInterface"
+			value="com.sunivo.ws.interfaces.server.lgs.ILgsAdditionQuoteServiceWS" />
+	</bean>
+</beans>
